@@ -1,10 +1,6 @@
 
 import React, { Component } from "react";
-import { useNavigate } from "react-router-dom";
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Badge } from "reactstrap";
-
-
-
 
 export default class CartSummary extends Component {
     render() {
