@@ -1,6 +1,9 @@
 
 import React, { Component } from "react";
+import { useNavigate } from "react-router-dom";
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Badge } from "reactstrap";
+
+
 
 
 export default class CartSummary extends Component {
@@ -14,18 +17,16 @@ export default class CartSummary extends Component {
                     <DropdownMenu right>
                         {this.props.cart.map(cartItem => (
                             <DropdownItem key={cartItem.product.id}>
-                               
                                 <Badge color="danger" onClick={()=>this.props.removeFromCart(cartItem.product)}> X </Badge>
-
                                 {cartItem.product.productName}
-                                
                                 <Badge color="success" >{cartItem.quantity}</Badge>
                             </DropdownItem> 
                         ))}
                         <DropdownItem divider />
-                        <DropdownItem>
-                            Reset
+                        <DropdownItem onClick={()=>this.props.showCart}>
+                            Show the Cart
                         </DropdownItem>
+                       
                     </DropdownMenu >
 
                 </UncontrolledDropdown>
