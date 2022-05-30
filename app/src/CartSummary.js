@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Badge } from "reactstrap";
 
+
 export default class CartSummary extends Component {
     render() {
         return (
@@ -19,7 +20,7 @@ export default class CartSummary extends Component {
                             </DropdownItem> 
                         ))}
                         <DropdownItem divider />
-                        <DropdownItem onClick={()=>this.props.showCart}>
+                        <DropdownItem>
                             Show the Cart
                         </DropdownItem>
                        

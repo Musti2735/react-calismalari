@@ -47,9 +47,7 @@ export default class App extends Component {
       .then(data => this.setState({ products: data }));
   };
 
-showCart = ()=>{
-    console.log("/CartLİst")
-  }
+
 
 
   render() {
@@ -62,7 +60,7 @@ showCart = ()=>{
             cart={this.state.cart}
             products={this.state.products}
             removeFromCart={this.removeFromCart} 
-            showMenu={this.showCart}/>
+            />
           <Row>
             <Col xs="3">
               <Category changeCategory={this.changeCategory} info={categoryInfo} />
